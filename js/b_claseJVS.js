@@ -19,10 +19,10 @@
 // ------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------
 
-// //METODOS DE STRING
+//METODOS DE STRING
 
 // //Pasar todo el string a Mayusculas
-// console.log(nombre.toLocaleUpperCase());
+// console.log(nombre.toUpperCase());
 
 // //Pasar todo el string a Minusculas
 // console.log(nombre.toLowerCase());
@@ -41,11 +41,11 @@
 // //Ultimo caracter
 // console.log(apellido.charAt(apellido.length - 1));
 
-// //Obtener una parte de la cadena de string
-// //.substring();
+//Obtener una parte de la cadena de string
+//.substring();
 
 // console.log(apellido.substring(2));
-// console.log(apellido.substring(0, 3));
+// console.log(apellido.substring(0, 4));
 
 // //Saber si incluye algun caracter especifico
 // //.includes();
@@ -79,7 +79,7 @@ console.log(arrayFrase);
 //.JOIN
 //Unir un array
 
-let nuevaFrase = arrayFrase.join(" ");
+let nuevaFrase = arrayFrase.join("_");
 console.log(nuevaFrase);
 
 // ------------------------------------------------------------------------------------------
