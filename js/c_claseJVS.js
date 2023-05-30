@@ -36,13 +36,21 @@ C-CAPITALIZAS LA PALABRA "Mascota"
 // console.log(palabra.toUpperCase());
 // //B
 // console.log(palabra.toLowerCase());
-// //C - Mascota
+// C - Mascota
 // //Obtener el primer caracter
 // let primeraLetra = palabra.at(0).toUpperCase();
 // console.log(primeraLetra);
+
+// //Obtener el resto de la palabra
 // let restoPalabra = palabra.substring(1);
 // console.log(restoPalabra);
+// //Concatenar
 // console.log(primeraLetra + restoPalabra);
+
+// //Hacerlo en una sola linea
+
+// // let palabracapitalizada = palabra.at(0).toUpperCase() + palabra.substring(1);
+// // console.log(palabracapitalizada);
 
 // ------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------
@@ -113,4 +121,16 @@ C-CAPITALIZAS LA PALABRA "Mascota"
 // ---------------------------------------------------------------------------------------------------
 
 //Numeros Randoms
-//Math.random()
+
+/*Math.random()
+Devuelve numeros aleatorios del 0 al 1
+
+Math.random()*10
+Devuelve numeros aleatorios del 1 al 10
+
+Math.random()*100
+Devuelve numeros aleatorios del 10 al 100*/
+
+/*!!!Tener en cuenta que los valores que devuelve estan con decimales: PARA QUITARLOS USAMOS .ceil
+
+ej: "Math.ceil(Math.random()*100);"*/
