@@ -1,4 +1,6 @@
-//CONCATENAR ARREGLOS .conccat()
+//METODOS DE ARRAY
+
+// //CONCATENAR ARREGLOS .concat()
 
 // let alumnos1 = ["Juan", "Valentina", "Francisco", "Florencia"];
 // console.log(alumnos1);
@@ -153,6 +155,7 @@
 // console.log(calificaciones);
 // ------------------------------------------------------------------------------------------
 // //Tarea 4
+////COMO AGREGAR ELEMENTOS A UN ARRAY VACIO
 
 // /*Pedir por pantalla nombre de 5 alumnos
 //  - Guardarlos en un arreglo
