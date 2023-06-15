@@ -30,7 +30,7 @@ function saludarPersona(parametro1, parametro2) {
   console.log(`Hola ${parametro1} ${parametro2}`);
 }
 
-// saludarPersona(nombre, apellido);
+//saludarPersona(nombre, apellido);
 
 // ------------------------------------------------------------------------------------------
 //Funcion para sumar valores
