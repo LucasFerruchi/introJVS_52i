@@ -208,3 +208,42 @@ const tarjetaPresentacion = () => {
 tarjetaPresentacion();
 
 // ------------------------------------------------------------------------------------------
+/*Ejercicio: mostrar una lista
+de los nombres y apellidos de los usuarios
+en orden alfabetico por apellido*/
+
+const listaUsuarios1 = () => {
+  let usuarios = data.map((usuario) => {
+    return {
+      nombre: usuario.first_name,
+      apellido: usuario.last_name,
+    };
+  });
+  usuarios.sort((a, b) => {
+    if (a.apellido > b.apellido) {
+      return 1;
+    } else if (a.apellido < b.apellido) {
+      return -1;
+    } else {
+      return 0; //Si son iguales
+    }
+  });
+  console.log(usuarios);
+};
+
+listaUsuarios1();
+
+// ------------------------------------------------------------------------------------------
+//Convertir a string
+
+const listaUsuarios2 = () => {
+  let usuarios = data.map((usuario) => {
+    return `${usuario.last_name} ${usuario.first_name}`;
+  });
+  // console.log(usuarios.sort());
+  usuarios.sort().forEach((usuario, index) => {
+    console.log(`${index + 1} - ${usuario}`);
+  });
+};
+
+listaUsuarios2();
