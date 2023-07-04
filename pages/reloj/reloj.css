@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Italianno&family=Lato:wght@300;400;700&family=MonteCarlo&family=Montserrat:ital,wght@0,400;1,300;1,400&family=MuseoModerno:wght@200&family=Oswald:wght@300&family=Roboto+Serif:ital,opsz,wght@1,8..144,100;1,8..144,200&display=swap");
+
+.relojFondo {
+  font-family: "Advent Pro", sans-serif;
+  color: azure;
+  background-image: url(../reloj/img/IMG_8038.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
