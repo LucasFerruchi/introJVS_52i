@@ -76,3 +76,15 @@ const redirigir = () => {
 //-----------------------------------------
 //-----------------------------------------
 //DOM
+
+//document
+
+/*
+
+getElementsByTagName()
+getElementsByID()
+getElementsByClassName()
+querySelector()
+querySelectorAll()
+
+*/
