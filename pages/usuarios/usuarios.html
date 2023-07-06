@@ -9,7 +9,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/pages/usuarios/usuarios.css" />
+    <link rel="stylesheet" href="./usuarios.css" />
     <title>Document</title>
   </head>
   <body>
@@ -22,12 +22,20 @@
 
         <div class="row text-center">
           <div class="col-md-6 col-sm-12 my-3">
-            <button type="button" class="btn btn-primary">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="ordenarApellido()"
+            >
               Ordenar de la A-Z
             </button>
           </div>
           <div class="col-md-6 col-sm-12 my-3">
-            <button type="button" class="btn btn-primary">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="ordenarApellido(1)"
+            >
               Ordenar de la Z-A
             </button>
           </div>
@@ -35,8 +43,11 @@
 
         <hr />
 
-        <div class="row row-cols-sm-1 row-cols-md-3 g-4 my-3">
-          <div class="col">
+        <div
+          class="row row-cols-sm-1 row-cols-md-3 g-4 my-3"
+          id="contenedor-cards"
+        >
+          <!-- <div class="col">
             <div class="card">
               <img src="..." class="card-img-top" alt="..." />
               <div class="card-body">
@@ -47,7 +58,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <hr />
@@ -115,6 +126,6 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="/pages/usuarios/usuarios.js"></script>
+    <script src="./usuarios.js"></script>
   </body>
 </html>
