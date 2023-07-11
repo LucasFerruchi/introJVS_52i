@@ -47,18 +47,7 @@
           class="row row-cols-sm-1 row-cols-md-3 g-4 my-3"
           id="contenedor-cards"
         >
-          <!-- <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-            </div>
-          </div> -->
+          <!-- Cards -->
         </div>
 
         <hr />
@@ -66,7 +55,7 @@
         <h2>Agregar nuevo usuario</h2>
 
         <div class="row mb-5">
-          <form>
+          <form onsubmit="agregarUsuario(event)">
             <div class="row">
               <div class="col-sm-12 col-md-6 my-2 mx-auto">
                 <label for="nombre" class="form-label">Nombre </label>

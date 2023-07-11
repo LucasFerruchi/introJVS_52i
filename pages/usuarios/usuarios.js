@@ -62,10 +62,6 @@ let contenedorCard = document.querySelector("#contenedor-cards");
 /*
 COLUMNA
 <div class="col">
-         
-          </div>
-
-          TARJETA
              <div class="card">
               <img src="..." class="card-img-top" alt="..." />
               <div class="card-body">
@@ -76,6 +72,10 @@ COLUMNA
                 </p>
               </div>
             </div>
+          </div>
+
+          TARJETA
+         
 */
 
 //RENDERIZAR la card
@@ -132,6 +132,40 @@ const ordenarApellido = (valor = 0) => {
   }
 
   //c-Imprimir lista
+  listaUsuarios();
+};
+
+//Funcion para agregar usuario nuevo
+
+const agregarUsuario = (event) => {
+  //1-Detener el submit
+  event.preventDefault();
+
+  //2-Limpiar contenedor
+  contenedorCard.innerHTML = "";
+
+  //3-Crear id
+  let id = data.at(-1).id + 1;
+
+  //4-Capturar los datos de los input
+  let first_name = document.querySelector("#nombre").value;
+  let last_name = document.querySelector("#apellido").value;
+  let email = document.querySelector("#email").value;
+  let avatar = document.querySelector("#img").value;
+
+  //5-Crear la clase usuario
+  let usuario = new Usuario(id, first_name, last_name, email, avatar);
+
+  //6-Agregar al arreglo el nuevo usuario
+  data.push(usuario);
+
+  //7-Limpiar el form
+  document.querySelector("#nombre").value = "";
+  document.querySelector("#apellido").value = "";
+  document.querySelector("#email").value = "";
+  document.querySelector("#img").value = "";
+
+  //8-Imprimir
   listaUsuarios();
 };
 
