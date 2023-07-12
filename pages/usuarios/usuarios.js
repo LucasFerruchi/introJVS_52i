@@ -9,51 +9,56 @@ class Usuario {
   }
 }
 
-let data = [
-  {
-    id: 7,
-    email: "michael.lawson@reqres.in",
-    first_name: "Michael",
-    last_name: "Lawson",
-    avatar: "http://reqres.in/img/faces/7-image.jpg",
-  },
-  {
-    id: 8,
-    email: "lindsay.ferguson@reqres.in",
-    first_name: "Lindsay",
-    last_name: "Ferguson",
-    avatar: "http://reqres.in/img/faces/8-image.jpg",
-  },
+// let usuarios = [
+//   // {
+//   //   id: 7,
+//   //   email: "michael.lawson@reqres.in",
+//   //   first_name: "Michael",
+//   //   last_name: "Lawson",
+//   //   avatar: "http://reqres.in/img/faces/7-image.jpg",
+//   // },
+//   // {
+//   //   id: 8,
+//   //   email: "lindsay.ferguson@reqres.in",
+//   //   first_name: "Lindsay",
+//   //   last_name: "Ferguson",
+//   //   avatar: "http://reqres.in/img/faces/8-image.jpg",
+//   // },
+//   // {
+//   //   id: 9,
+//   //   email: "tobias.funque@reqres.in",
+//   //   first_name: "Tobias",
+//   //   last_name: "Funke",
+//   //   avatar: "http://reqres.in/img/faces/9-image.jpg",
+//   // },
+//   // {
+//   //   id: 10,
+//   //   email: "byron.fields@reqres.in",
+//   //   first_name: "Byron",
+//   //   last_name: "Fields",
+//   //   avatar: "http://reqres.in/img/faces/10-image.jpg",
+//   // },
+//   // {
+//   //   id: 11,
+//   //   email: "george.edwards@reqres.in",
+//   //   first_name: "George",
+//   //   last_name: "Edwards",
+//   //   avatar: "http://reqres.in/img/faces/11-image.jpg",
+//   // },
+//   // {
+//   //   id: 12,
+//   //   email: "rachel.howel@reqres.in",
+//   //   first_name: "Rachel",
+//   //   last_name: "Howel",
+//   //   avatar: "http://reqres.in/img/faces/12-image.jpg",
+//   // },
+// ];
 
-  {
-    id: 9,
-    email: "tobias.funque@reqres.in",
-    first_name: "Tobias",
-    last_name: "Funke",
-    avatar: "http://reqres.in/img/faces/9-image.jpg",
-  },
-  {
-    id: 10,
-    email: "byron.fields@reqres.in",
-    first_name: "Byron",
-    last_name: "Fields",
-    avatar: "http://reqres.in/img/faces/10-image.jpg",
-  },
-  {
-    id: 11,
-    email: "george.edwards@reqres.in",
-    first_name: "George",
-    last_name: "Edwards",
-    avatar: "http://reqres.in/img/faces/11-image.jpg",
-  },
-  {
-    id: 12,
-    email: "rachel.howel@reqres.in",
-    first_name: "Rachel",
-    last_name: "Howel",
-    avatar: "http://reqres.in/img/faces/12-image.jpg",
-  },
-];
+// //Enviar a localStorage
+// localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+//RECIBIR DESDE LOCALSTORAGE
+const data = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 //CAPTURAR CONTENEDOR DE LAS CARDS
 let contenedorCard = document.querySelector("#contenedor-cards");
@@ -62,6 +67,7 @@ let contenedorCard = document.querySelector("#contenedor-cards");
 /*
 COLUMNA
 <div class="col">
+          TARJETA
              <div class="card">
               <img src="..." class="card-img-top" alt="..." />
               <div class="card-body">
@@ -73,9 +79,6 @@ COLUMNA
               </div>
             </div>
           </div>
-
-          TARJETA
-         
 */
 
 //RENDERIZAR la card
@@ -144,8 +147,10 @@ const agregarUsuario = (event) => {
   //2-Limpiar contenedor
   contenedorCard.innerHTML = "";
 
-  //3-Crear id
-  let id = data.at(-1).id + 1;
+  //3-Crear id (a partir de usuarios existentes)
+  // let id = data.at(-1).id + 1;
+  //3-crear id (sin usuarios preexistentes)
+  let id = new Date().getTime();
 
   //4-Capturar los datos de los input
   let first_name = document.querySelector("#nombre").value;
@@ -158,6 +163,9 @@ const agregarUsuario = (event) => {
 
   //6-Agregar al arreglo el nuevo usuario
   data.push(usuario);
+
+  //!Agregar al localStorage
+  localStorage.setItem("usuarios", JSON.stringify(data));
 
   //7-Limpiar el form
   document.querySelector("#nombre").value = "";
