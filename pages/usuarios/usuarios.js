@@ -147,7 +147,7 @@ const agregarUsuario = (event) => {
   //2-Limpiar contenedor
   contenedorCard.innerHTML = "";
 
-  //3-Crear id (a partir de usuarios existentes)
+  // // 3-Crear id (a partir de usuarios existentes)
   // let id = data.at(-1).id + 1;
   //3-crear id (sin usuarios preexistentes)
   let id = new Date().getTime();
